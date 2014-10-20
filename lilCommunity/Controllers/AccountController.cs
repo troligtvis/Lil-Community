@@ -282,7 +282,7 @@ namespace lilCommunity.Controllers
             ViewBag.ReturnUrl = Url.Action("Manage");
             if (hasPassword)
             {
-                if (ModelState.IsValid)
+                if (ModelState.IsValid) 
                 {
                     IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
                     if (result.Succeeded)
