@@ -91,6 +91,10 @@ namespace lilCommunity.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+
+                user.Firstname = model.Firstname;
+                user.Lastname = model.Lastname;
+
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

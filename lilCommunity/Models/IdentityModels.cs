@@ -15,6 +15,11 @@ namespace lilCommunity.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string LastLogin { get; set; }
+        public int CountLogin { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
